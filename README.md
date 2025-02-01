@@ -2,6 +2,8 @@
 
 Bookshelf App adalah aplikasi web sederhana untuk mengelola daftar buku yang ingin dibaca dan sudah dibaca. Aplikasi ini menggunakan beberapa teknologi dan fitur untuk memberikan pengalaman pengguna yang baik.
 
+Klik [di sini](https://wanzkey.github.io/Tugas-Akhir-Belajar-Frond-End-Web-untuk-Pemula-By-WanZKey-Web/) untuk melihat aplikasi web ini.
+
 ## Teknologi yang Digunakan
 
 ### 1. HTML
