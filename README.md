@@ -62,7 +62,7 @@ Tooltip digunakan untuk memberikan informasi tambahan pada tombol aksi.
 6. Edit buku dengan mengklik tombol "Edit Buku".
 7. Aktifkan atau nonaktifkan mode gelap dengan mengklik tombol "Toggle Dark Mode".
 
-## Tentang Proyek Ini
+## Tentang Proyek Ini.
 
 Tugas ini dibuat oleh saya, Riduan, selaku peserta Coding Camp 2025 by DBS Foundation X Dicoding. Semoga aplikasi ini bermanfaat dan bisa membantu dalam mengelola daftar buku yang ingin dibaca dan sudah dibaca.
 
