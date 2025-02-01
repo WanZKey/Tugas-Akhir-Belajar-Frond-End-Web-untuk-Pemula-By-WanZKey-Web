@@ -1,0 +1,302 @@
+/* Reset padding, margin, dan box-sizing untuk semua elemen */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Font dan ukuran default untuk body, input, dan button */
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+/* Styling header biar keren */
+header {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4caf50;
+  color: white;
+}
+
+header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Main container styling */
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Styling untuk section input, search, dan book shelf */
+.input_section,
+.search_section,
+.book_shelf {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna judul section */
+.input_section > h2,
+.search_section > h2,
+.book_shelf > h2 {
+  text-align: center;
+  color: #4caf50;
+}
+
+/* Margin untuk input form */
+.input_section > form > .input,
+.search_section > form > .input {
+  margin: 8px 0;
+}
+
+/* Styling tombol form */
+.input_section > form > button,
+.search_section > form > button {
+  background-color: #4caf50;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efek hover untuk tombol */
+.input_section > form > button:hover,
+.search_section > form > button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Bold untuk teks dalam tombol */
+.input_section > form > button > span,
+.search_section > form > button > span {
+  font-weight: bold;
+}
+
+/* Styling input field */
+.input_section > form > .input > input,
+.search_section > form > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Warna label input */
+.input_section > form > .input > label,
+.search_section > form > label {
+  color: black;
+  font-weight: bold;
+}
+
+/* Styling untuk input inline */
+.input_section > form > .input_inline,
+.search_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label,
+.search_section > form > .input_inline > label {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Grid layout untuk form search */
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+/* Styling untuk daftar buku */
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+/* Styling item buku */
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Margin untuk judul dan paragraf dalam item buku */
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+/* Styling tombol aksi dalam item buku */
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efek hover untuk tombol aksi */
+.book_shelf > .book_list > .book_item > .action > button:hover {
+  transform: scale(1.05);
+}
+
+/* Warna tombol selesai dibaca */
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Warna tombol hapus buku */
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Tooltip di atas teks */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mode gelap untuk body */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Mode gelap untuk header */
+body.dark-mode header {
+  background-color: #333;
+}
+
+/* Mode gelap untuk card */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+/* Warna judul section di mode gelap */
+body.dark-mode .input_section > h2,
+body.dark-mode .search_section > h2,
+body.dark-mode .book_shelf > h2 {
+  color: #ffffff;
+}
+
+/* Warna tombol di mode gelap */
+body.dark-mode .input_section > form > button,
+body.dark-mode .search_section > form > button {
+  background-color: #333;
+}
+
+/* Efek hover tombol di mode gelap */
+body.dark-mode .input_section > form > button:hover,
+body.dark-mode .search_section > form > button:hover {
+  background-color: #555;
+}
+
+/* Warna label input di mode gelap */
+body.dark-mode .input_section > form > .input > label,
+body.dark-mode .input_section > form > .input_inline > label,
+body.dark-mode .search_section > form > label {
+  color: #ffffff;
+}
+
+/* Styling footer */
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: #4caf50;
+  color: white;
+  margin-top: 16px;
+}
+
+/* Mode gelap untuk footer */
+body.dark-mode footer {
+  background-color: #333;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
